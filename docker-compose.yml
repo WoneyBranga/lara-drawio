@@ -41,9 +41,18 @@ services:
         networks:
             - sail
         healthcheck:
-            test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+            test: [ "CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}" ]
             retries: 3
             timeout: 5s
+    drawio:
+        image: jgraph/drawio
+        container_name: drawio
+        restart: unless-stopped
+        ports:
+            - '${DRAWIO_HTTP_PORT:-8080}:8080'
+            - '${DRAWIO_HTTPS_PORT:-8443}:8443'
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
