@@ -6,6 +6,7 @@ Neste momento, dado um registro em banco com uma dada imagem qualquer em base64,
 dashboard mostrá esta e ao clicar o ambiente do drawio local será carregado.
 Ao salvar drawio, no banco nossa imagem será substituída pela atual do drawio.
 
+![](./demo.gif)
 
 ```bash
 # construcao utilizada para referencia
@@ -19,14 +20,14 @@ php artisan sail:install
 ./vendor/bin/sail composer require wireui/wireui
 ```
 Para reproduzir projeto:
+ ```bash
  git clone...
  composer install
  npm install
  npm run build
-
 ./vendor/bin/sail up -d
-
 ./vendor/bin/sail artisan migrate:fresh --seed
+```
 user: a@a.com
 pass: password
 
