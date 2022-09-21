@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('topologias', function (Blueprint $table) {
-            $table->string('id')->primary();
+            $table->id();
             $table->foreignId('user_id')->nullable()->index();
             $table->text('observacao')->nullable();
             $table->longText('imagem');
