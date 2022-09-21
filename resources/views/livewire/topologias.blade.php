@@ -4,7 +4,8 @@
             <li>
                 ID: {{ $topologia->id }} - Obs: {{ $topologia->observacao }}
                 <hr>
-                <img class="h-24 w-24"
+                <img alt="teste"
+                     class="scale-50 rounded border-4 border-gray-300 p-4 shadow-lg hover:scale-100"
                      id="image"
                      onclick="edit(this, {{ $topologia->id }});"
                      src="{{ $topologia->imagem }}"
@@ -20,7 +21,7 @@
         // https://www.diagrams.net/doc/faq/supported-url-parameters
         // se chamarmos um HTTPS interno, teremos problema num primeiro acesso em decorrencia da necessidade de se aceitar SSL;
         var editor =
-            'http://localhost:8080/?embed=1&ui=kennedy&spin=1&proto=json&math=0&libs=Rascunho&stealth=1&lang=pt-br';
+            'http://localhost:8080/?embed=1&ui=kennedy&spin=1&proto=json&math=0&libs=Rascunho&stealth=1&lang=pt-br&libs=basic;general';
         // var editor ='https://localhost:8443/?embed=1&ui=kennedy&spin=1&proto=json&browser=0&ruler=1&math=0&stealth=1&lang=pt-br&splash=0&mode=browser&clibs=Uhttps%3A%2F%2F10.48.103.180%2FgdeMonitor%2FDEV%2FRascunho.xml';
         var initial = null;
         var name = null;
